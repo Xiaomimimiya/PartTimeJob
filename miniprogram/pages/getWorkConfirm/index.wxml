@@ -1,0 +1,32 @@
+<view class="confirm_box">
+    <view class="content_box">
+        <view class="cu-form-group " style="border-radius: 14rpx;">
+            <view class="title">姓名:</view>
+            <view class="title">{{details.username}}</view>
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">年龄:</view>
+            <view class="title" style="font-weight: 700;">{{details.age}}</view>
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">性别:</view>
+            <view class="title">{{details.sex}}</view>
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">专业:</view>
+            <view class="title">{{details.profession}}</view>
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">地址:</view>
+            <view class="title">{{details.location}}</view>
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">求职意向</view>
+        </view>
+        <view class="cu-form-group ">
+            <text class="text-blue margin-right-xs">{{details.desc}}</text> 
+        </view>
+        
+    </view>
+</view>
+<van-submit-bar button-text="确认信息" bind:submit="onSubmit" />

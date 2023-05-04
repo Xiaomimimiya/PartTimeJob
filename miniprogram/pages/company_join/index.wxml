@@ -1,0 +1,62 @@
+<view class="box">
+    <view class="top_image">
+        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/jiameng.png" mode="" />
+    </view>
+</view>
+<view class="cu-card article">
+    <view class="cu-item shadow arrow">
+        <view class="title">
+            <view class="text-cut">商家加盟要求</view>
+            <view class="arrow" bindtap="goDetail" data-item="company_join_home">
+                <text class="arrow_text">立即加盟</text>
+                <image class="arrow_image"  src="/assets/images/icon/arrow-right.png" mode="" />
+            </view>
+        </view>
+        <view class="content">
+            <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/2.png" mode="aspectFill"></image>
+            <view class="desc">
+                <view class="text-content">
+                    <text>1. 资质要求：具备合法营业执照
+                    </text>
+                    <text>2. 服务质量：提供优质兼职岗位
+                    </text>
+                    <text>3. 待遇保障：及时支付合理薪资
+                    </text>
+                </view>
+                <view>
+                    <view class="cu-tag bg-red light sm round">优先展示兼职</view>
+                    <view class="cu-tag bg-green light sm round">优先提供求职者</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="cu-card article">
+    <view class="cu-item shadow">
+        <view class="title">
+            <view class="text-cut">个人加盟要求</view>
+            <view class="arrow" bindtap="goDetail" data-item="company_join_person">
+                <text class="arrow_text">立即加盟</text>
+                <image class="arrow_image" src="/assets/images/icon/arrow-right.png" mode="" />
+            </view>
+        </view>
+        <view class="content">
+            <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/QQ截图20230419104707.png" mode="aspectFill"></image>
+            <view class="desc">
+                <view class="text-content">
+                    <text>1. 能力要求：具有一定工作经验
+                    </text>
+                    <text>2. 时间质量：课余时间自由充裕
+                    </text>
+                    <text>3. 岗位保障：明确自身岗位职责
+                    </text>
+                </view>
+                <view>
+                    <view class="cu-tag bg-red light sm round">第一时间提供兼职</view>
+                    <view class="cu-tag bg-green light sm round">推荐高薪兼职岗位</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

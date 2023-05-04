@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "van-empty":"/components/vantui/empty/index",
+        "van-tab": "/components/vantui/tab/index",
+        "van-tabs": "/components/vantui/tabs/index"
+    },
+    "navigationBarTitleText": "代购物品"
+}

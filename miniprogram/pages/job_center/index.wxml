@@ -1,0 +1,28 @@
+<view class="job_content">
+    <block wx:for="{{data_item}}" wx:key="index">
+        <view class="job_item">
+            <view class="left">
+                <image src="{{item.image}}" />
+            </view>
+            <view class="middle">
+                <view class="title">
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="rate">
+                    <van-rate icon="like" void-icon="like-o" size="30rpx" readonly value="{{item.rate}}" color="#EE0A24" />
+                </view>
+                <view class="location">
+                    <text>{{item.location}}</text>
+                </view>
+            </view>
+            <view class="right">
+                <view class="price">
+                    <text class="price_text">￥{{item.price}} </text>
+                </view>
+                <view class="price_button">
+                <button class="cu-btn round bg-blue sm" bindtap="goDetail" data-item="{{item}}">查看详情</button>
+               </view>
+            </view>
+        </view>
+    </block>
+</view>

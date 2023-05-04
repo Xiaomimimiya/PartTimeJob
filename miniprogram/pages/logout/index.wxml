@@ -1,0 +1,46 @@
+<view class="box">
+    <view class="cu-bar bg-white solid-bottom hot_goods ">
+        <view class="action">
+            <text class="cuIcon-titles text-red"></text><text style="color: #10171F;">账号注销的风险</text>
+        </view>
+    </view>
+    <view class="content">
+        <view class="desc">
+            <view class="title">
+                <text>1. 账户删除，无法登录</text>
+            </view>
+            <view class="info">
+                <text>一旦注销，您将无法使用该账号登录CONV学生兼职乐园。</text>
+            </view>
+        </view>
+        <view class="desc">
+            <view class="title">
+                <text>2. 信息抹除，无法恢复</text>
+            </view>
+            <view class="info">
+                <text>注销后将永久抹除CONV学生兼职乐园的所有信息，包括但不限于兼职记录、个人资料、下单记录、账户金额、聊天记录等。
+                </text>
+            </view>
+        </view>
+        <view class="desc">
+            <view class="title">
+                <text>3. 不再提供咨询和售后服务</text>
+            </view>
+            <view class="info">
+                <text>后续将不再提供关于该账户的相关咨询和售后服务。</text>
+            </view>
+        </view>
+        <!-- <view class="desc">
+            <view class="title">
+                <text>4. 账户不可找回</text>
+            </view>
+            <view class="info">
+                <text>后续将不再提供关于该账户的相关咨询和售后服务。</text>
+            </view>
+        </view> -->
+    </view>
+</view>
+<view class="button_click">
+    <button type="button" bindtap="logout">已清楚风险，确定继续</button>
+</view>
+

@@ -1,0 +1,71 @@
+page {
+    background-color: #FFFFFF;
+}
+
+.image_box {
+    width: 100%;
+}
+
+.image_box image {
+    width: 100%;
+}
+
+
+.container {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    margin: 0 auto;
+    font-size: 40rpx;
+    font-weight: 700;
+}
+
+
+
+input[type="text"],
+input[type="number"] {
+    margin: 0 auto;
+    
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    height: 100rpx;
+    vertical-align: bottom !important;
+}
+
+button[type="button"],
+button[type="submit"] {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    /* 设置圆角半径为按钮高度的一半 */
+    font-size: 16px;
+    color: #fff;
+    background-color: #007aff;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* 添加阴影效果 */
+}
+
+
+
+.photo {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 300px;
+    margin-bottom: 10px;
+}

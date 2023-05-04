@@ -1,0 +1,139 @@
+<!--index.wxml-->
+<wxs src="../../utils/util.wxs" module="filters" />
+<view class="banner">
+    <swiper indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" circular autoplay interval="4000">
+        <block wx:for="{{banner}}" wx:key="index">
+            <swiper-item>
+                <image src='{{item}}' mode="aspectFitll" style="width:100%;height:100%;" />
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<view class=" margin-top-xs margin-bottom-xs">
+    <view class="like">
+        <image class="like_icon" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/like.png" mode="" />
+        <text>公告：兼职平台全新上线，更多活动敬请期待！</text>
+    </view>
+    <view class="like">
+        <image class="like_icon" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/like.png" mode="" />
+        <text>公告：立即加盟平台，优先获取服务帮助~</text>
+    </view>
+</view>
+
+<view class="grid">
+    
+    <view class="grid-item" bindtap="goDetail" data-item="express">
+        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/express.png" style="width: 100rpx;height: 100rpx;"></image>
+        <text class="name">快递代取</text>
+    </view>
+    
+    <view class="grid-item" bindtap="goDetail" data-item="snack">
+        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/shopping.png" style="width: 100rpx;height: 100rpx;"></image>
+        <text class="name">物品代购</text>
+    </view>
+    <view class="grid-item" bindtap="goDetail" data-item="tackaway">
+        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/food.png" style="width: 100rpx;height: 100rpx;"></image>
+        <text class="name">外卖代拿</text>
+    </view>
+    <view class="grid-item" bindtap="goDetail" data-item="rush_class">
+        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/in_class.png" style="width: 100rpx;height: 100rpx;"></image>
+        <text class="name">选课代抢</text>
+    </view>
+
+    <view class="grid-item" bindtap="goDetail" data-item="waiter">
+        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/job.png" style="width: 100rpx;height: 100rpx;"></image>
+        <text class="name">商家招聘</text>
+    </view>
+    <view class="grid-item" bindtap="goDetail" data-item="job_center">
+        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/other.png" style="width: 100rpx;height: 100rpx;"></image>
+        <text class="name">其他服务</text>
+    </view>
+</view>
+
+<view class="info">
+    <view class="left comm" bindtap="goWork">
+        <view class="left-text">
+            <text class="want">我要求职</text>
+            <view class="info_icon">
+                <text>立即登记 >></text>
+            </view>
+        </view>
+        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/resume.png" alt="" />
+    </view>
+    <view class="left comm" bindtap="goJoin">
+        <view class="left-text">
+            <text class="want">我要加盟</text>
+            <view class="info_icon">
+                <text>立即加盟 >></text>
+            </view>
+        </view>
+        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/join.png" alt="" />
+    </view>
+</view>
+<view class="cu-bar bg-white solid-bottom hot_goods">
+    <view class="action">
+        <view class="latest">
+            <text>最新推荐</text>
+        </view>
+        <view class="cu-btn infos round line-cyan" bindtap="goDetail" data-item="express">快递代取</view>
+        <view class="cu-btn infos round line-cyan" bindtap="goDetail" data-item="tackaway">外卖代拿</view>
+    </view>
+</view>
+
+<scroll-view>
+    <block wx:for="{{latestData}}" wx:key="index">
+        <view class="express_box">
+            <view class="box2">
+                <block wx:if="{{item.type==1}}">
+                    <image class="express_image" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/experss.png"></image>
+                </block>
+                <block wx:if="{{item.type==2}}">
+                    <image class="express_image" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/cart.png"></image>
+                </block>
+                <block wx:if="{{item.type==3}}">
+                    <image class="express_image" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/online_class.png"></image>
+                </block>
+                <block wx:if="{{item.type==4}}">
+                    <image class="express_image" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/foods.png"></image>
+                </block>
+                <view class="middle">
+                    <view class="top">
+                        <view class="start">
+                            {{item.start_address}}
+                        </view>
+                        <image class="row_image" src="/assets/images/comm/row.png"></image>
+                        <view class="end">
+                            {{item.end_address}}
+                        </view>
+                    </view>
+                    <view class="middle_bottom">
+                        <view class="desc">
+                            <text>描述：</text>
+                            {{item.desc}}
+                        </view>
+                    </view>
+                    <view class="bottom">
+                        <view class="time">
+                            <text>发单时间:</text>
+                            {{filters.formatDate(item._createTime)}}
+                        </view>
+                    </view>
+                </view>
+                <view class="status">
+                    <view class="price">
+                        ￥{{item.price}}
+                    </view>
+                    <block wx:if="{{item.status}}">
+                        <view class="margin-tb-sm text-center">
+                            <button class="cu-btn round bg-red sm">已接单</button>
+                        </view>
+                    </block>
+                    <block wx:else>
+                        <button class="cu-btn round bg-blue sm" bindtap="goOrderDetail" data-item="{{item}}">去接单</button>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </block>
+</scroll-view>

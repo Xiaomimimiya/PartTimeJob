@@ -1,0 +1,37 @@
+<view class="image_box">
+    <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/auth.png" mode="" />
+</view>
+<view class="notice">
+    <van-notice-bar background="#ecf9ff" color="#1989fa" left-icon="volume-o" text="为了保障兼职信息的真实性，请尽快完成实名认证。" />
+</view>
+<scroll-view>
+    <!-- 实名认证界面 -->
+    <view class="container">
+        <form catchsubmit="submitForm">
+            <view class="cu-form-group">
+                <view class="title">姓名:</view>
+                <input placeholder="请输入您的姓名" class="input" name="name"></input>
+            </view>
+
+            <view class="cu-form-group">
+                <view class="title">学号:</view>
+                <input placeholder="请输入您的学号" class="input" name="number"></input>
+            </view>
+            
+            <view class="form-group" style="margin-top: 30rpx;">
+                <button type="button" bindtap="takePhotoFront">拍摄学生卡正面</button>
+            </view>
+            <view class="form-group">
+                <image class="photo" src="{{photoFront}}" wx:if="{{photoFront}}" />
+                <button type="button" bindtap="takePhotoBack">拍摄学生卡反面</button>
+            </view>
+            <view class="form-group">
+                <image class="photo" src="{{photoBack}}" wx:if="{{photoBack}}" />
+                <button type="button" bindtap="submit">立即提交</button>
+            </view>
+        </form>
+    </view>
+    <view class="desc" style="text-align: center; font-size: 30rpx;">
+        <text style="text-align: center;margin-bottom: 30rpx;">我们将会严格保护用户的信息隐私！！！</text>
+    </view>
+</scroll-view>

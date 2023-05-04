@@ -1,0 +1,114 @@
+<wxs src="../../utils/util.wxs" module="filters" />
+<van-tabs active="{{ active }}">
+    <van-tab title="快递">
+        <view class="containers">
+            <block wx:if="{{sendExpressLog.length>0}}">
+                <block wx:for="{{sendExpressLog}}" wx:key="index">
+                <view class="log_box">
+                    <view>发单类型：<text style="color: rgb(54, 53, 53); font-weight: 600;">快递</text></view>
+                    <view>价格： <text style="color:red">￥{{item.price}}</text></view>
+                    <view>下单时间：<text style="color: gray;">{{filters.formatDate(item._createTime)}}</text></view>
+                    <view>物品描述：<text style="color: gray;">{{item.desc}}</text></view>
+                    <view class="btn">
+                        <button class="cu-btn round line-red" bindtap="cancleOrder" data-item="{{item}}">
+                            <text>取消订单</text>
+                        </button>
+                        <block wx:if="{{item.is_finish}}">
+                            <button class="cu-btn round line-gray" data-item="{{item}}">
+                                <text>评价订单</text>
+                            </button>
+                        </block>
+                        <block wx:else>
+                            <button class="cu-btn round line-cyan" bindtap="CompleteOrder" data-item="{{item}}">
+                                <text>确认完成</text>
+                            </button>
+                        </block>
+                    </view>
+                </view>
+            </block>
+            </block>
+            <block wx:else>
+                <empty content="暂无数据"></empty>
+            </block>
+        </view>
+    </van-tab>
+    <van-tab title="代购">
+        <view class="containers">
+            <block wx:if="{{sendSnackLog.length>0}}">
+                <block wx:for="{{sendSnackLog}}" wx:key="index">
+                <view class="log_box">
+                    <view>发单类型：<text style="color: rgb(54, 53, 53); font-weight: 600;">代购</text></view>
+                    <view>价格： <text style="color:red">￥{{item.price}}</text></view>
+                    <view>下单时间：<text style="color: gray;">{{filters.formatDate(item._createTime)}}</text></view>
+                    <view>物品描述：<text style="color: gray;">{{item.desc}}</text></view>
+
+                    <view class="btn">
+                        <button class="cu-btn round line-red" bindtap="cancleOrder" data-item="{{item}}">
+                            <text>取消订单</text>
+                        </button>
+                        <button class="cu-btn round line-cyan" bindtap="CompleteOrder" data-item="{{item}}">
+                            <text>确认完成</text>
+                        </button>
+                    </view>
+                </view>
+            </block>
+            </block>
+            <block wx:else>
+                <empty content="暂无数据"></empty>
+            </block>
+        </view>
+
+
+    </van-tab>
+    <van-tab title="外卖">
+        <view class="containers">
+            <block wx:if="{{tackawayLog.length>0}}">
+                <block wx:for="{{tackawayLog}}" wx:key="index">
+                <view class="log_box">
+                    <view>发单类型：<text style="color: rgb(54, 53, 53); font-weight: 600;">代购</text></view>
+                    <view>价格： <text style="color:red">￥{{item.price}}</text></view>
+                    <view>下单时间：<text style="color: gray;">{{filters.formatDate(item._createTime)}}</text></view>
+                    <view>物品描述：<text style="color: gray;">{{item.desc}}</text></view>
+
+                    <view class="btn">
+                        <button class="cu-btn round line-red" bindtap="cancleOrder" data-item="{{item}}">
+                            <text>取消订单</text>
+                        </button>
+                        <button class="cu-btn round line-cyan" bindtap="CompleteOrder" data-item="{{item}}">
+                            <text>确认完成</text>
+                        </button>
+                    </view>
+                </view>
+            </block>
+            </block>
+            <block wx:else>
+                <empty content="暂无数据"></empty>
+            </block>
+        </view>
+    </van-tab>
+    <van-tab title="抢课">
+        <view class="containers">
+           <block wx:if="{{rushClassLog.length>0}}">
+            <block wx:for="{{rushClassLog}}" wx:key="index">
+                <view class="log_box">
+                    <view>发单类型：<text style="color: rgb(54, 53, 53); font-weight: 600;">代购</text></view>
+                    <view>价格： <text style="color:red">￥{{item.price}}</text></view>
+                    <view>下单时间：<text style="color: gray;">{{filters.formatDate(item._createTime)}}</text></view>
+                    <view>物品描述：<text style="color: gray;">{{item.desc}}</text></view>
+                    <view class="btn">
+                        <button class="cu-btn round line-red" bindtap="cancleOrder" data-item="{{item}}">
+                            <text>取消订单</text>
+                        </button>
+                        <button class="cu-btn round line-cyan" bindtap="CompleteOrder" data-item="{{item}}">
+                            <text>确认完成</text>
+                        </button>
+                    </view>
+                </view>
+            </block>
+           </block>
+            <block wx:else>
+                <empty content="暂无数据"></empty>
+            </block>
+        </view>
+    </van-tab>
+</van-tabs>

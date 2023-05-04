@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "van-button":"/components/vantui/button/index",
+        "wxParse":"/components/wxParse/wxParse"
+    },
+    "navigationBarTitleText": "招聘详情"
+}

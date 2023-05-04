@@ -1,0 +1,80 @@
+<view class="box">
+    <view class="cu-list menu ">
+        <view class="avatar">
+            <image style="width: 150rpx;height: 150rpx;" src="{{snack_detail.user_avatar}}" mode="" />
+            <text style="font-size: 40rpx;">{{snack_detail.send_name}}</text>
+        </view>
+    </view>
+    <view class="cu-list menu sm-border">
+        <view class="cu-item">
+            <view class="content padding-tb-sm">
+                <view class="top_content">
+                    <image src="/assets/images/comm/start.png" mode="" />
+                    <text>到哪里去购买</text>
+                </view>
+                <view class="bottom">
+                    <text style="color:rgb(238, 18, 18);">{{snack_detail.start_address}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="cu-item">
+            <view class="content padding-tb-sm">
+                <view class="top_content">
+                    <image src="/assets/images/comm/end.png" mode="" />
+                    <text>送达的具体位置</text>
+                </view>
+                <view class="bottom">
+                    <text style="color:rgb(235, 17, 17);">{{snack_detail.end_address}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="cu-item">
+            <view class="content padding-tb-sm">
+                <view class="top_content">
+                    <image src="/assets/images/comm/question.png" mode="" />
+                    <text>代购要求详情</text>
+                </view>
+                <view class="bottom">
+                    <text>{{snack_detail.desc}}</text>
+                </view>
+                <view class="image_box">
+                    <block wx:for="{{snack_detail.imgs}}" wx:key="index">
+                        <van-image bindtap="previewImage" data-url="{{item}}" width="150" height="150" src="{{item}}" />
+                    </block>
+                </view>
+            </view>
+        </view>
+
+    </view>
+    <view class="cu-list menu sm-border">
+        <view class="cu-item">
+            <view class="content padding-tb-sm">
+                <view class="top_content">
+                    <image src="/assets/images/comm/time.png" mode="" />
+                    <text>送达时间</text>
+                </view>
+                <view class="bottom">
+                    <text style="color:rgb(255, 2, 2);font-size: 33rpx;">{{snack_detail.endtime}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="cu-item">
+            <view class="content padding-tb-sm">
+                <view class="top_content">
+                    <image src="/assets/images/comm/price.png" mode="" />
+                    <text class="price">接单价格</text>
+                </view>
+                <view class="bottom">
+                    <text style="color: #e61e1e; font-size: 40rpx;">￥{{snack_detail.price}}</text>
+                </view>
+            </view>
+        </view>
+
+    </view>
+</view>
+<view class="do_express">
+    <view class="cu-bar input">
+        <button class="cu-btn round bg-cyan shadow" bindtap="startChat" data-item="{{snack_detail}}">联系单主</button>
+        <button class="cu-btn round bg-red shadow" bindtap="goOrder">立即接单</button>
+    </view>
+</view>

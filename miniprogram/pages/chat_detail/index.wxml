@@ -1,0 +1,45 @@
+    <scroll-view scroll-y="true" class="chat_content">
+        <view class="cu-chat" wx:for="{{chat_detail}}" wx:key="index">
+            <block>
+                <block wx:if="{{item.id==user_id}}">
+                    <view class="cu-item self">
+                        <view class="main">
+                            <view class="content bg-green shadow">
+                                <block wx:if="{{item.text.length>20}}">
+                                    <van-image bindtap="previewImage" data-url="{{item}}" width="120" height="120" src="{{item.text}}" />
+                                </block>
+                                <block wx:else>
+                                    <rich-text nodes="{{item.text}}"></rich-text>
+                                </block>
+                            </view>
+                        </view>
+                    <image class="avatar_image" src="{{user_avatar}}" mode=""/>
+                    </view>
+                </block>
+                <block wx:if="{{item.id!==user_id}}">
+                    <view class="cu-item">
+                        <image class="avatar_image" src="{{friend_avatar}}" mode=""/>
+                        <view class="main">
+                            <view class="content shadow">
+                                <block wx:if="{{item.text.length>20}}">
+                                    <van-image bindtap="previewImage" data-url="{{item}}" width="120" height="120" src="{{item.text}}" />
+                                </block>
+                                <block wx:else>
+                                    <rich-text nodes="{{item.text}}"></rich-text>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </block>
+        </view>
+    </scroll-view>
+    <view class="pub-comment">
+        <view class = "pub-left">
+            <input class="pub-input" bindinput="handleInput" value="{{inputValue}}"></input>
+        </view>
+        <view class="image_box" bindtap="sendImage">
+            <image src="/assets/images/comm/camer.png" mode=""/>
+        </view>
+        <view class="pub-button{{inputValue==''?'':'-with-text'}}" bindtap="publishMessage">发送</view>
+    </view>

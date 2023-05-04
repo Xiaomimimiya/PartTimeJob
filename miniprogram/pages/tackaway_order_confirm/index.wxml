@@ -1,0 +1,25 @@
+<view class="confirm_box">
+    <view class="content_box">
+        <view class="cu-form-group " style="border-radius: 14rpx;">
+            <view class="title">联系方式</view>
+            <view class="title">{{details.contact}}</view>
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">订单类型</view>
+            <view class="title" style="font-weight: 700;">外卖</view>
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">要求描述</view>
+            <view class="title">{{details.desc}}</view>
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">接单时间</view>
+            <view class="title">{{details.time}}</view>
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">接单金额</view>
+            <view class="title">{{details.price}}</view>
+        </view>
+    </view>
+</view>
+<van-submit-bar price="{{price}}" button-text="提交订单" bind:submit="onSubmit" />

@@ -1,0 +1,78 @@
+.job_content {
+    margin: 0 auto;
+}
+
+.job_item {
+    width: 96%;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    border-radius: 24rpx;
+    display: flex;
+    align-items: center;
+}
+
+.job_item .left image {
+    width: 130rpx;
+    height: 130rpx;
+    margin-left: 10rpx;
+    border-radius: 16rpx;
+}
+
+.middle {
+    margin-left: 40rpx;
+    padding: 10rpx;
+}
+
+.middle .title {
+    font-size: 35rpx;
+    font-weight: 550;
+    line-height: 56rpx;
+    margin-top: 10rpx;
+}
+
+.location text {
+    color: coral;
+    background-color: #FDF2EB;
+    padding-top: 5rpx;
+    padding-bottom: 5rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    border-radius: 15rpx;
+}
+
+.right {
+    position: absolute;
+    right: 5rpx;
+    width: 25%;
+}
+
+.right .price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    color: #e01222;
+    font-size: 35rpx;
+    margin-bottom: 60rpx;
+    font-weight: 650;
+}
+
+.price .price_text {
+    font-size: 30rpx;
+
+}
+
+.price_button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 140rpx !important;
+    height: 50rpx !important;
+}

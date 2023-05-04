@@ -1,0 +1,43 @@
+<wxs src="../../utils/util.wxs" module="filters" />
+<view class=" margin radius shadow bg-white padding animation-slide-bottom {{isFixedNav ? 'display-none' : ''}}">
+    <text> 注意事项：\n </text>
+    <text> 1.请保证您所发布的代取外卖信息真实有效，切勿发布虚假信息。\n</text>
+    <text> 2.若存在相关非真实信息，管理员有权删除您发布的信息。</text>
+</view>
+
+<form catchsubmit="publish">
+    <view class="cu-form-group">
+        <view class="title">外卖地点:</view>
+        <input placeholder="取外卖位置" class="input" name="start"></input>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">送达地点:</view>
+        <input placeholder="送达位置" class="input" name="end"></input>
+    </view>
+
+
+    <view class="cu-form-group">
+        <view class="title">配送时间:</view>
+        <input placeholder="配送时间(配送时间或截止时间)" class="input" name="time"></input>
+    </view>
+    <view class="cu-form-group margin-top">
+        <view class="title">代取价格：</view>
+        <input class="input" placeholder="请输入代取外卖的价格" name="price" type="number" />
+    </view>
+    <view class="cu-form-group">
+        <view class="title">联系方式:</view>
+        <input placeholder="建议微信/电话" class="input" name="contact"></input>
+        <text class=" text-orange"></text>
+    </view>
+
+    <view class="cu-form-group align-start">
+        <view class="title">具体要求：</view>
+        <textarea name="desc" maxlength="-1" disabled="{{modalName!=null}}" placeholder="关于代取外卖的具体要求"></textarea>
+    </view>
+
+    <view class="padding flex  flex-wrap ">
+        <button class="cu-btn  bg-cyan shadow-blur flex-sub  margin-xs round" formType="reset">清空数据</button>
+        <button class="cu-btn  bg-blue shadow-blur flex-sub   margin-xs  round" formType="submit">发布外卖</button>
+    </view>
+
+</form>

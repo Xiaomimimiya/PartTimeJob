@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "van-button":"/components/vantui/button/index"
+    },
+    "navigationBarTitleText": "商家招聘"
+}

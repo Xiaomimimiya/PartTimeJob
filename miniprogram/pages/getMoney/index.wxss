@@ -1,0 +1,145 @@
+.money_box {
+    width: 100%;
+}
+
+.top {
+    width: 100%;
+    /* background-color: #3FC3A7; */
+    height: 450rpx;
+    background: #02AAB0;
+
+    background: -webkit-linear-gradient(to right, #00CDAC, #3FC3A7);
+
+    background: linear-gradient(to right, #00CDAC, #3FC3A7);
+}
+
+.title {
+    padding-top: 50rpx;
+}
+
+.top .title text {
+    position: relative;
+    color: #fff;
+    font-size: 40rpx;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    font-weight: 500;
+}
+
+.money {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.money .rmb {
+    color: #fff;
+    font-size: 40rpx;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    font-weight: 500;
+}
+
+.money .price {
+
+    color: #fff;
+    font-size: 60rpx;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    font-weight: 500;
+
+}
+
+.middle_box {
+    position: absolute;
+    top: 270rpx;
+    width: 100%;
+}
+
+.middle_box .box_content {
+    width: 92%;
+    background-color: #FFFFFF;
+    height: 500rpx;
+    margin: 0 auto;
+    border-radius: 16rpx;
+}
+.box_content .price_title{
+    font-size: 40rpx;
+    padding: 30rpx;
+}
+
+.box_content .rmb_two{
+    font-size: 60rpx;
+    padding-right: 10rpx;
+}
+input{
+    font-size: 40rpx !important;
+    height: 100rpx;
+    color: #03cfa3;
+}
+.input_box{
+    display: flex;
+}
+.input_box .rmb_two{
+    margin-left: 20rpx;
+}
+.desc{
+    display: flex;
+    align-items: center;
+}
+.desc .icon{
+   display: flex;
+   align-items: center;
+   position: absolute;
+   right: 90rpx;
+}
+.desc .icon image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.desc .icon text{
+    margin-left: 20rpx;
+    font-size: 30rpx;
+}
+.bottom_btn{
+    
+   margin-top: 20rpx;
+}
+.bottom_btn button{
+    width: 70%;
+ 
+    background-color: #43C5A7;
+    color: #fff;
+}
+
+.withdraw{
+
+    width: 94%;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 10rpx;
+    border-radius: 16rpx;
+}
+.withdraw .with_item{
+    padding-top: 20rpx;
+    padding-left: 30rpx;
+    display: flex;
+    align-content:center;
+}
+.with_item .item_left .desc{
+    font-size: 35rpx;
+    font-weight: 600;
+}
+.with_item .item_left .time{
+    margin-top: 10rpx;
+    font-size: 30rpx;
+    color: gray;
+    margin-bottom: 10rpx;
+}
+.item_right{
+    position: absolute;
+    right: 100rpx;
+    font-size: 40rpx;
+    color: #C1C1C1;
+    margin-top: 10rpx;
+}

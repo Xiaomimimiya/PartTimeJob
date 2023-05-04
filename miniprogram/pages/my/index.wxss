@@ -1,0 +1,77 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    align-items: center;
+    background: #fff;
+  
+  }
+  
+  .btn-login {
+    padding: 8%;
+    background: white;
+  }
+  
+  .userinfo-avatar {
+    height: 200rpx;
+    width: 200rpx;
+    border-radius:50%;
+    
+  }
+  
+  .userinfo-nickname {
+    margin-top: 20rpx;
+    font-size: 38rpx;
+  }
+  
+  
+  .runner_desc {
+    font-size: 10pt;
+    color: red
+  }
+  
+  .dizhizi {
+    color: white
+  }
+  
+  .dizhi {
+    margin-top: 200px;
+  }
+  
+  /*  下面是关键 去除边框 */
+  .button {
+    width: 100%;
+    background: white;
+    border: none;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1.5;
+    font-size: 16px
+  }
+  
+  /*  下面是 除边框 */
+  .button::after {
+    border: none;
+    border-radius: 0;
+  }
+
+  .logo{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.logo image{
+	width: 300rpx;
+	height: 290rpx;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo view{
+	/* color: grey; */
+	opacity: 0.6;
+}

@@ -1,0 +1,4 @@
+<view class="container" style="margin-top:{{top}}rpx">
+  <image class="empty-img" mode="widthFix" src="/assets/images/comm/empty.png"></image>
+  <view class="title">{{content}}</view>
+</view>

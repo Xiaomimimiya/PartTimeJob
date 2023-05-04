@@ -1,0 +1,91 @@
+{
+	"pages": [
+    
+        "pages/home/index",
+
+        "pages/express/index",
+        "pages/express_order/index",
+        "pages/express_send/index",
+
+        "pages/snack/index",
+        "pages/snack_send/index",
+        "pages/snack_order/index",
+
+        "pages/rush_class/index",
+        "pages/rush_send/index",
+        "pages/rush_order/index",
+
+        "pages/tackaway/index",
+        "pages/tackaway_order/index",
+        "pages/tackaway_send/index",
+
+        "pages/waiter/index",
+        "pages/waiter_detail/index",
+
+       
+        "pages/job_center/index",
+        "pages/job_detail/index",
+        "pages/getWork/index",
+        "pages/getWorkConfirm/index",
+
+        "pages/company_join/index",
+        "pages/company_join_person/index",
+        "pages/company_join_home/index",
+
+        "pages/chat/index",
+        "pages/chat_detail/index",
+
+        "pages/my/index",
+        "pages/infoAuth/index",
+        "pages/sendlog/index",
+        "pages/takeLog/index",
+        "pages/getMoney/index",
+        "pages/login/index",
+        "pages/register/index",
+        "pages/about/index",
+        "pages/privacy/index",
+        "pages/logout/index",
+        "pages/express_order_confirm/index",
+        "pages/snack_order_confirm/index",
+        "pages/tackaway_order_confirm/index"
+	],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "你的位置信息将用于小程序位置展示"
+		}
+	},
+	"window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#1296db",
+        "list": [{
+            "pagePath": "pages/home/index",
+            "text": "首页",
+            
+            "iconPath": "assets/images/tabbar/select_home_no.png",
+            "selectedIconPath": "assets/images/tabbar/select_home.png"
+        },
+        {
+            "pagePath": "pages/chat/index",
+            "text": "消息",
+            "iconPath": "assets/images/tabbar/no_Message.png",
+            "selectedIconPath": "assets/images/tabbar/Message.png"
+            
+        },
+        {
+            "pagePath": "pages/my/index",
+            "text": "我的",
+            "iconPath": "assets/images/tabbar/no_me.png",
+            "selectedIconPath": "assets/images/tabbar/select_me.png"
+            
+        }
+    
+    ]
+},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json"
+}

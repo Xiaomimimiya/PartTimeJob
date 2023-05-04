@@ -1,0 +1,35 @@
+<view class="job_box">
+    <view class="top">
+        <view class="job_title">
+            <view class="job_name">
+                {{job_detail.name}}
+            </view>
+            <view class="job_price">
+                {{job_detail.price}}
+            </view>
+        </view>
+        <view class="job_time">
+            {{job_detail.time}}
+        </view>
+    </view>
+    <view class="middle">
+        <view class="cu-bar bg-white solid-bottom hot_goods margin-top-xs">
+            <view class="action">
+                <text class="cuIcon-titles text-blue"></text><text style="color: #10171F;">工作内容</text>
+            </view>
+        </view>
+        <view class="job_content">
+            <wxParse user-select nodes="{{content}}"></wxParse>
+        </view>
+    </view>
+    <view class="middle">
+        <view class="cu-bar bg-white solid-bottom hot_goods margin-top-xs">
+            <view class="action">
+                <text class="cuIcon-titles text-blue"></text><text style="color: #10171F;">工作要求</text>
+            </view>
+        </view>
+        <view class="job_content">
+            <wxParse user-select nodes="{{require}}"></wxParse>
+        </view>
+    </view>
+</view>

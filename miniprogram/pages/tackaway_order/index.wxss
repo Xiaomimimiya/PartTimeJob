@@ -1,0 +1,43 @@
+
+.box{
+    border-radius: 14rpx;
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 10rpx;
+}
+.avatar{
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 20rpx;
+}
+.avatar text{
+    margin-left: 20rpx;
+    color:rgb(11, 165, 226);
+}
+.top_content{
+    display: flex;
+    align-items: center;
+}
+.top_content image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.top_content text{
+    font-size: 35rpx;
+    font-weight: 700;
+    margin-left: 20rpx;
+}
+.bottom{
+    margin-left: 70rpx;
+    color: gray;
+}
+.top_content .price{
+    color: rgb(211, 101, 101);
+}
+.do_express{
+    margin-top: 10rpx;
+}
+.do_express button{
+    margin-left: 40rpx !important;
+}

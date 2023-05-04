@@ -1,0 +1,44 @@
+<view class="job_detail">
+    <view class="top_box">
+        <block wx:if="{{waiter_detail.sex==='男'}}">
+            <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/job_male.png"></image>
+        </block>
+        <block wx:else>
+            <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/job_female.jpg"></image>
+        </block>
+        <view class="company_content">
+            <view class="name_box">
+                <text>{{waiter_detail.chat_name}}</text>
+                <text class="contact" selectable="true">{{waiter_detail.contact}}</text>
+            </view>
+            <view class="title_box">
+                <text>{{waiter_detail.job_title}}</text>
+                <text> · {{waiter_detail.company_name}}</text>
+            </view>
+        </view>
+        <view class="chat_btn">
+            <van-button round type="info" color="#0081FF" size="normal">
+                <text>聊一聊</text>
+            </van-button>
+        </view>
+    </view>
+    <view class="middle_box">
+        <view>
+            <text class="job_desc_title">工作地址:</text>
+            <text class="location">{{waiter_detail.location}}</text>
+        </view>
+        <view>
+            <text class="job_desc_title">岗位介绍:</text>
+            <text class="location">{{waiter_detail.jobName}}</text>
+        </view>
+    </view>
+    <view class="middle_box">
+        <view class="job_desc_title">
+            <text>工作内容</text>
+        </view>
+        <view class="job_desc">
+            <wxParse user-select nodes="{{waiter_desc}}"></wxParse>
+        </view>
+    </view>
+
+</view>

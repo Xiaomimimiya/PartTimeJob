@@ -1,0 +1,110 @@
+<view class="banner cu-bar search bg-red shadow shadow-lg bg-white">
+    <view class="search-form round">
+        <input class="searchInput" bindconfirm='goSearch' confirm-type='search' bindinput="getSearchKey" placeholder="搜索所需的职位" value="{{searchKey}}"></input>
+        <!-- 取消按钮 -->
+        <view style="font-size: 40rpx;" bindtap="CancleSearch">
+            <text class="cuIcon-close"></text>
+        </view>
+    </view>
+    <view class="action">
+        <button class="cu-btn bg-gradual-blue shadow-blur round " bindtap="goSearch">搜索</button>
+    </view>
+</view>
+
+<view wx:if="{{SearchList.length}}">
+    <view wx:for="{{SearchList}}" wx:key="index">
+        <view class="job_list_item" bindtap="goWaiterDetail" data-id="{{item._id}}">
+            <view class="job_list_left">
+                <view class="job_header">
+                    <view class="job_name">{{item.jobName}}</view>
+                    <view class="job_price">{{item.salary}}</view>
+                </view>
+                <view class="job_label">
+                    <block wx:for="{{item.welfare}}" wx:key="index">
+                        <van-button round size="mini">{{item}}</van-button>
+                    </block>
+                </view>
+                <view class="job_company_detail">
+                    <view class="location">
+                        <text class="lg text-lg text-gray cuIcon-location"></text>
+                        <text class="location_text">{{item.location}}</text>
+                    </view>
+                    <view class="company_name">
+                        <text class="lg text-lg text-gray cuIcon-home"></text>
+                        <text class="location_text">{{item.company_name}}</text>
+                    </view>
+                    <view class="company_class">
+                        <text class="line">|</text>
+                        <text class="location_text">{{item.profession}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="job_list_right">
+                <view class="job_photo">
+                    <block wx:if="{{item.sex==='男'}}">
+                        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/job_male.png"></image>
+                    </block>
+                    <block wx:else>
+                        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/job_female.jpg"></image>
+                    </block>
+                </view>
+                <view class="chat_name">
+                    <text>{{item.chat_name}}</text>
+                </view>
+                <view class="job_title">
+                    <text>{{item.job_title}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>
+<view wx:else>
+    <view class="job_list_box">
+        <block wx:for="{{waiter_list}}" wx:key="index">
+            <view class="job_list_item" bindtap="goWaiterDetail" data-id="{{item._id}}">
+                <view class="job_list_left">
+                    <view class="job_header">
+                        <view class="job_name">{{item.jobName}}</view>
+                        <view class="job_price">{{item.salary}}</view>
+                    </view>
+                    <view class="job_label">
+                        <block wx:for="{{item.welfare}}" wx:key="index">
+                            <van-button round size="mini">{{item}}</van-button>
+                        </block>
+                    </view>
+                    <view class="job_company_detail">
+                        <view class="location">
+                            <text class="lg text-lg text-gray cuIcon-location"></text>
+                            <text class="location_text">{{item.location}}</text>
+                        </view>
+                        <view class="company_name">
+                            <text class="lg text-lg text-gray cuIcon-home"></text>
+                            <text class="location_text">{{item.company_name}}</text>
+                        </view>
+                        <view class="company_class">
+                            <text class="line">|</text>
+                            <text class="location_text">{{item.profession}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="job_list_right">
+                    <view class="job_photo">
+                        <block wx:if="{{item.sex==='男'}}">
+                            <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/job_male.png"></image>
+                        </block>
+                        <block wx:else>
+                            <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/job_female.jpg"></image>
+                        </block>
+                    </view>
+                    <view class="chat_name">
+                        <text>{{item.chat_name}}</text>
+                    </view>
+                    <view class="job_title">
+                        <text>{{item.job_title}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

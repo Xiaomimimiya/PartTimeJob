@@ -1,0 +1,14 @@
+.container{
+  text-align: center;
+  padding: 30rpx 50rpx;
+}
+.empty-img{
+  width: 240rpx;
+  height: 238rpx;
+}
+.title{
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  color: #10A1D6;
+  line-height: 60rpx;
+}

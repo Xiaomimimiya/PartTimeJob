@@ -1,0 +1,13 @@
+{
+    "usingComponents": {
+      
+        "van-grid": "/components/vantui/grid/index",
+        "van-grid-item": "/components/vantui/grid-item/index",
+        "van-row": "/components/vantui/row/index",
+        "van-col": "/components/vantui/col/index",
+        "van-notice-bar":"/components/vantui/notice-bar/index",
+        
+        "van-button":"/components/vantui/button/index"
+    },
+    "navigationBarTitleText": "CONV学生兼职乐园"
+}

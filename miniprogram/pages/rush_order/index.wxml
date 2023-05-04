@@ -1,0 +1,46 @@
+<wxs src="../../utils/util.wxs" module="filters" />
+<view class="desc_express">
+    <block>
+        <view class="content_box">
+            <view class="left">
+                <image class="userAvatar" src="{{class_detail.send_avatar}}"></image>
+            </view>
+            <view class="middle">
+                <view class="top">
+                    <view class="username">
+                        {{class_detail.send_name}}
+                    </view>
+                    <view class="time">
+                        {{filters.formatDate(class_detail._createTime)}}
+                    </view>
+                </view>
+                <view class="bottom">
+
+                    <view class="start">
+                        <text>抢课名称：</text>
+                        {{class_detail.classname}}
+                    </view>
+                    <view class="end">
+                        <text>抢课时间：</text>
+                        {{class_detail.time}}
+                    </view>
+                    <view class="end">
+                        <text selectable="true">联系方式：{{class_detail.chat}}</text>
+                    </view>
+                    <view class="desc">
+                        <text>抢课描述：</text>
+                        {{class_detail.desc}}
+                    </view>
+                </view>
+            </view>
+
+
+        </view>
+    </block>
+</view>
+<view class="do_express">
+    <view class="cu-bar input">
+        <button class="cu-btn round bg-cyan shadow" bindtap="startChat" data-item="{{class_detail}}">联系单主</button>
+        <button class="cu-btn round bg-red shadow" bindtap="goOrder">立即接单</button>
+    </view>
+</view>

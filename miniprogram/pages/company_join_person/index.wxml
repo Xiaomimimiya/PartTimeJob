@@ -1,0 +1,68 @@
+<view class=" margin radius shadow bg-white padding animation-slide-bottom {{isFixedNav ? 'display-none' : ''}}">
+    <text> 个人加盟注意事项：\n </text>
+    <text> 1.请保证您所发布的快递信息真实有效，务必留下正确的联系方式。\n</text>
+    <text> 2.个人加盟和部分信息将在其他服务处进行展示，仅用于用户参考</text>
+</view>
+<scroll-view>
+    <form catchsubmit="publish">
+        <view class="cu-form-group">
+            <view class="title">店铺名称:</view>
+            <input placeholder="店铺名称" class="input" name="name"></input>
+        </view>
+        <view class="cu-form-group">
+            <view class="title">店铺地址:</view>
+            <input placeholder="店铺地址" class="input" name="address"></input>
+        </view>
+        <view class="cu-form-group">
+            <view class="title">经营范围:</view>
+            <input class="input" placeholder="经营范围" name="price" type="range" />
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">联系方式:</view>
+            <input class="input" placeholder="联系方式" name="chat" type="chat" />
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">工作时间:</view>
+            <input class="input" placeholder="工作时间" name="time" type="chat" />
+        </view>
+        <view class="cu-form-group ">
+            <view class="title">薪资待遇:</view>
+            <input class="input" placeholder="薪资待遇" name="price" type="chat" />
+        </view>
+        <view class="cu-form-group align-start">
+            <view class="title">工作内容:</view>
+            <textarea name="desc" maxlength="-1" disabled="{{modalName!=null}}" placeholder="工作具体内容"></textarea>
+        </view>
+        <view class="cu-form-group align-start">
+            <view class="title">工作要求:</view>
+            <textarea name="requir" maxlength="-1" disabled="{{modalName!=null}}" placeholder="工作具体要求"></textarea>
+        </view>
+        <view class="cu-bar bg-white margin-top-xs">
+            <view class="action">
+                <text class="text-black">相关资证信息</text>
+            </view>
+            <view class="action">
+                {{imgList.length}}/3
+            </view>
+        </view>
+        <view class="cu-form-group">
+            <view class="grid col-4 grid-square flex-sub">
+                <view class="bg-img" wx:for="{{imgList}}" wx:key="index">
+                    <image class="img" src='{{item}}' mode='aspectFill'></image>
+                    <view class="cu-tag bg-red" bindtap="DeleteImg" data-index="{{index}}">
+                        <text class="cuIcon-close"></text>
+                    </view>
+                </view>
+                <!-- 选择图片按钮 -->
+                <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<6}}">
+                    <text class="cuIcon-cameraadd"></text>
+                </view>
+            </view>
+        </view>
+        <view class="padding flex flex-wrap ">
+            <button class="cu-btn  bg-cyan shadow-blur flex-sub  margin-xs round" formType="reset">清空数据</button>
+            <button class="cu-btn  bg-blue shadow-blur flex-sub  margin-xs  round" formType="submit">提交申请
+            </button>
+        </view>
+    </form>
+</scroll-view>

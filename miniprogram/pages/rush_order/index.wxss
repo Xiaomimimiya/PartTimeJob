@@ -1,0 +1,52 @@
+.desc_express{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    background-color: #FFFFFF;
+    border-radius: 25rpx;
+}
+
+.content_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+
+}
+.content_box .top{
+    display: flex;
+    align-items: center;
+    margin-top: 20rpx;
+}
+ image{
+    width: 80rpx;
+    height: 80rpx;
+    margin:10rpx;
+}
+.content_box .top .username{
+    font-size: 35rpx;
+    margin-left: 30rpx;
+}
+.content_box .top .time{
+   margin-left: 30rpx;
+   font-size: 30rpx;
+   color: gray;
+}
+.middle{
+   
+    width: 100%;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    border-radius: 14rpx;
+}
+.bottom{
+    margin-left: 30rpx;
+    margin-top: 25rpx;
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+}
+.do_express{
+    margin-top: 20rpx;
+}
+.do_express button{
+    margin-left: 40rpx !important;
+}

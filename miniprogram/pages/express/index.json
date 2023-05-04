@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "van-empty":"/components/vantui/empty/index"
+    },
+    "navigationBarTitleText": "代取快递"
+}

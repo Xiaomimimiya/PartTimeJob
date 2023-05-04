@@ -1,0 +1,62 @@
+Page {
+    background-color: #F7F7F7;
+}
+
+.chat_box {
+    margin-top: 15rpx;
+    width: 100%;
+    margin-bottom: 15rpx;
+}
+
+.no-message {
+    display: flex;
+    justify-content: center;
+}
+
+.no-message image {
+    margin-top: 200rpx;
+}
+
+.box_content {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-radius: 12rpx;
+    background-color: #FFFFFF;
+    margin-bottom: 8rpx;
+}
+
+.left {
+    margin-left: 10rpx;
+    margin-top: 15rpx;
+}
+
+.friend_avatar {
+    width: 96rpx;
+    height: 96rpx;
+    border-radius:50%;
+}
+
+.middle {
+    margin-left: 20rpx;
+}
+
+.middle_top {
+    display: flex;
+}
+
+.middle_top .time {
+    position: absolute;
+    right: 15rpx;
+    color: #B9B9B9;
+}
+
+.middle_top .name {
+    color: black;
+    font-weight: 700;
+}
+
+.middle_bottom .text {
+    color: gray;
+}

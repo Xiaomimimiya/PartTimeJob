@@ -1,0 +1,29 @@
+
+<view class="main">
+
+
+    <view class="login">
+
+        <view class="kuang shadow">
+            <view class="hint">注册信息</view>
+            <image class="avatar" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm_avatar.png" />
+
+            <view class="form-group">
+                <text class="title">账号：</text>
+                <input type="text" placeholder="不少于4个汉字" model:value="{{account}}" bindinput="bindAccountInput" />
+            </view>
+
+            <view class="form-group">
+                <text class="title">密码：</text>
+                <input type="password" placeholder="不少于6位数" model:value="{{password}}" bindinput="bindPasswordInput" />
+            </view>
+            <view class="form-group">
+                <text>邮箱：</text>
+                <input type="email" placeholder="用于找回密码使用" model:value="{{email}}" bindinput="bindEmailInput" />
+            </view>
+            <button class="btn" bindtap="register">立即注册</button>
+            <view bindtap="url" class="return">返回</view>
+        </view>
+
+    </view>
+</view>

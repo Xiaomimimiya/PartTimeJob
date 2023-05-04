@@ -1,0 +1,95 @@
+<!--pages/me/me.wxml-->
+<view class="logo margin-top" wx:if="{{isShowUserName}}">
+    <image src="{{userInfo.user_avatar}}" class="animation-scale-up" style="animation-delay: 0.4s;"></image>
+    <text class="userinfo-nickname">{{userInfo.username}}</text>
+</view>
+
+<!--如果用户没有授权，显示登陆按钮  -->
+<view wx:if="{{!isShowUserName}}" class="btn-login">
+    <button type="primary" bindtap="getUserProfile">立即登录</button>
+</view>
+<view class='line_5px' />
+<scroll-view>
+    <view wx:if="{{isShowUserName}}">
+    <view class="btn-area  cu-list menu card-menu margin-top-xs margin-bottom-xs shadow-lg radius">
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/infoAuth/index" hover-class="none">
+                <text class="cuIcon-addressbook text-cyan "></text>
+                <text class="text-grey text-sm">实名认证</text>
+            </navigator>
+        </view>
+
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/sendlog/index" hover-class="none">
+                <text class="cuIcon-footprint text-cyan"></text>
+                <text class="text-grey text-sm">发单记录</text>
+            </navigator>
+        </view>
+
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/takeLog/index" hover-class="none">
+                <text class="cuIcon-shop text-cyan"></text>
+                <text class="text-grey text-sm">接单记录</text>
+            </navigator>
+        </view>
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/getMoney/index" hover-class="none">
+                <text class="cuIcon-moneybag text-cyan"></text>
+                <text class="text-grey text-sm">立即提现</text>
+            </navigator>
+        </view>
+        <view class="cu-item arrow">
+            <navigator class="content" url="/pages/logout/index" hover-class="none">
+                <text class="cuIcon-news text-cyan"></text>
+                <text class="text-grey text-sm">账号注销</text>
+            </navigator>
+        </view>
+        <view class="cu-item arrow">
+            <button class="cu-btn content" style="font-weight: normal;" hover-class="none">
+                <text class="cuIcon-exit text-cyan"></text>
+                <text class="text-grey text-sm" bindtap="tuichu">退出登录</text>
+            </button>
+        </view>
+       
+    </view>
+
+</view>
+
+<!-- 没有登录就可以显示的 -->
+<view class="btn-area  cu-list menu card-menu margin-top-xs margin-bottom-xs shadow-lg radius">
+    <view class="cu-item arrow">
+        <navigator class="content" url="/pages/about/index" hover-class="none">
+            <text class="cuIcon-question text-cyan"></text>
+            <text class="text-grey text-sm">关于平台</text>
+        </navigator>
+    </view>
+    <view class="cu-item arrow">
+        <navigator class="content" url="/pages/privacy/index" hover-class="none">
+            <text class="cuIcon-edit text-cyan"></text>
+            <text class="text-grey text-sm">隐私政策</text>
+        </navigator>
+    </view>
+    <view class="cu-item arrow">
+        <button class="cu-btn content" style="font-weight: normal;" hover-class="none" bindtap="clearStorage">
+            <text class="cuIcon-delete text-cyan"></text>
+            <text class="text-grey text-sm">清理缓存</text>
+        </button>
+    </view>
+    <view class="cu-item arrow">
+        <button class="cu-btn content" style="font-weight: normal;" hover-class="none" open-type="feedback">
+            <text class="cuIcon-writefill text-cyan"></text>
+            <text class="text-grey text-sm">建议反馈</text>
+        </button>
+    </view>
+
+    <!-- 在线客服 -->
+    <view class="cu-item arrow">
+        <button class="cu-btn content" style="font-weight: normal;" hover-class="none" open-type="contact">
+            <text class="cuIcon-service text-cyan"></text>
+            <text class="text-grey text-sm">在线客服</text>
+        </button>
+    </view>
+
+
+</view>
+</scroll-view>

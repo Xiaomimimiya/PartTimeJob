@@ -1,0 +1,46 @@
+<!--miniprogram/mePackage/pages/about/about.wxml-->
+<view>
+    <!-- logo & version -->
+    <view class="logo margin-top">
+        <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/QQ截图20230411203316.png" class="animation-scale-up" style="animation-delay: 0.4s;"></image>
+        <view class="text-gray text-lg text-shadow margin-top">v 3.0.3</view>
+        <view class="text-bold text-gray text-lg text-shadow margin-top-xs">Copyright xxxx © 2023 </view>
+    </view>
+    <!-- information -->
+    <view class="shadow margin radius bg-white padding text-lg">
+        <text>欢迎使用"CONV学生兼职乐园小程序,本程序由个人开发制作完成,旨在为在校师生提供尽可能的方便。
+            现已支持功能板块:
+            [快递代取]
+            + 快递代取接单和发单
+            [物品代购]
+            + 校内外物品代购的接单和发单
+            [外卖代取]
+            + 校内周围的外卖代取和代送
+            [代抢课]
+            + 网络课程的代抢
+            [兼职查找]
+            + 提供优质的校外和校内兼职服务
+            [兼职需求]
+            + 针对自己的实际情况来找兼职
+            [商家加盟]
+            + 商家加盟，进行咨询
+            [更多功能] 正在考虑开发中===> 有需要的功能可以给客服发送消息
+
+        </text>
+
+        <!-- 联系方式 -->
+        <view class="text-sub">
+            <text> 联系方式
+            </text>
+            <text class="cuIcon-service"> xxxxxxxxxx@xxx.com
+            </text>
+        </view>
+
+        <!-- 开发人员 -->
+        <view class="text-sub">
+            <text>开发人员
+            </text>
+            <text>@xxxxx</text>
+        </view>
+    </view>
+</view>

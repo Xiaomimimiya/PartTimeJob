@@ -1,0 +1,126 @@
+<wxs src="../../utils/util.wxs" module="filters" />
+<view class="banner cu-bar search bg-red shadow shadow-lg bg-white">
+    <view class="search-form round">
+        <input class="searchInput" bindconfirm='goSearch' confirm-type='search' bindinput="getSearchKey" placeholder="搜索代购商品名称" value="{{searchKey}}"></input>
+        <!-- 取消按钮 -->
+        <view style="font-size: 40rpx;" bindtap="CancleSearch">
+            <text class="cuIcon-close"></text>
+        </view>
+    </view>
+    <view class="action">
+        <button class="cu-btn bg-gradual-blue shadow-blur round " bindtap="goSearch">搜索</button>
+    </view>
+</view>
+<van-tabs active="{{ active }}">
+    <van-tab title="校内">
+        <view wx:if="{{in_snack_list.length==0}}" class='no-message'>
+            <van-empty description="暂无订单"></van-empty>
+        </view>
+        <view wx:else class="express_container">
+            <scroll-view>
+                <block wx:for="{{in_snack_list}}" wx:key="index">
+                    <view class="express_box">
+                        <view class="box">
+                            <image class="express_image" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/cart.png"></image>
+                            <!-- <image class="express_image" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/snack_icon.png"></image> -->
+                            <view class="middle">
+                                <view class="top">
+                                    <view class="start">
+                                        {{item.start_address}}
+                                    </view>
+                                    <image class="row_image" src="/assets/images/comm/row.png"></image>
+                                    <view class="end">
+                                        {{item.end_address}}
+                                    </view>
+                                </view>
+                                <view class="middle_bottom">
+                                    <view class="desc">
+                                        <text>描述：</text>
+                                        {{item.desc}}
+                                    </view>
+                                </view>
+                                <view class="bottom">
+                                    <view class="time">
+                                        <text>发单时间:</text>
+                                        {{filters.formatDate(item._createTime)}}
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="status">
+                                <view class="price">
+                                    ￥{{item.price}}
+                                </view>
+                                <block wx:if="{{item.status}}">
+                                    <view class="margin-tb-sm text-center">
+                                        <button class="cu-btn round bg-red sm">已接单</button>
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <button class="cu-btn round bg-blue sm" bindtap="goSnackOrder" data-id="{{item._id}}">去接单</button>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+    </van-tab>
+    <van-tab title="校外">
+        <view wx:if="{{out_snack_list.length==0}}" class='no-message'>
+            <van-empty description="暂无订单"></van-empty>
+        </view>
+        <view wx:else class="express_container">
+            <scroll-view>
+                <block wx:for="{{out_snack_list}}" wx:key="index">
+                <view class="express_box">
+                    <view class="box">
+                        <image class="express_image" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/home_grids2/gird_icon/cart.png"></image>
+                        <!-- <image class="express_image" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/snack_icon.png"></image> -->
+                        <view class="middle">
+                            <view class="top">
+                                <view class="start">
+                                    {{item.start_address}}
+                                </view>
+                                <image class="row_image" src="/assets/images/comm/row.png"></image>
+                                <view class="end">
+                                    {{item.end_address}}
+                                </view>
+                            </view>
+                            <view class="middle_bottom">
+                                <view class="desc">
+                                    <text>描述：</text>
+                                    {{item.desc}}
+                                </view>
+                            </view>
+                            <view class="bottom">
+                                <view class="time">
+                                    <text>发单时间:</text>
+                                    {{filters.formatDate(item._createTime)}}
+                                </view>
+                            </view>
+                        </view>
+                        <view class="status">
+                            <view class="price">
+                                ￥{{item.price}}
+                            </view>
+                            <block wx:if="{{item.status}}">
+                                <view class="margin-tb-sm text-center">
+                                    <button class="cu-btn round bg-red sm">已接单</button>
+                                </view>
+                            </block>
+                            <block wx:else>
+                                <button class="cu-btn round bg-blue sm" bindtap="goSnackOrder" data-id="{{item._id}}">去接单</button>
+                            </block>
+                        </view>
+
+                    </view>
+
+                </view>
+            </block>
+            </scroll-view>
+        </view>
+    </van-tab>
+
+
+</van-tabs>
+<image class="btn-image" src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/send.png" bindtap="goSend"></image>

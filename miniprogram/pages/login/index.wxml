@@ -1,0 +1,45 @@
+<view class="logo margin-top">
+    <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/QQ截图20230411203316.png" class="animation-scale-up" style="animation-delay: 0.4s;"></image>
+</view>
+<view class="login-box">
+    <view class="bd">
+        <form class="login-form">
+            <view class="input-group">
+                <text class="input-label">帐号</text>
+                <input type="text" cursor-spacing="30" id="userid" maxlength="-1" placeholder="请输入注册的用户名" bindinput="getUserName" />
+            </view>
+            <view class="input-group">
+                <text class="input-label">密码</text>
+                <input password="true" cursor-spacing="30" id="passwd" placeholder="请输入注册的密码" bindinput="getPassword" />
+            </view>
+            <view class="login-help">
+                <!-- <button class="cu-btn round bg-red left">忘记密码</button> -->
+                <button class="cu-btn round bg-green left" bindtap="goregister">注册账号</button>
+                <button class="cu-btn round bg-cyan left" bindtap="showHelp">登录帮助</button>
+            </view>
+        </form>
+        <view class="confirm-btn" bindtap="login">
+            <text>确认登录</text>
+        </view>
+        <view class="confirm">登陆即同意《用户协议》及《隐私政策》</view>
+    </view>
+</view>
+<view class="help" id="help" wx:if="{{help_status}}" bindtap="tapHelp">
+    <view class="box">
+        <view class="box-hd">
+            <text class="box-title">帮助</text>
+            <image class="box-close" src="/assets/images/icon/close.png" bindtap="hideHelp"></image>
+        </view>
+        <view class="box-bd">
+            <view class="help-q">1、帐号和密码是什么？</view>
+            <view class="help-a">
+                <text>帐号：你所注册的账号</text>
+                <text>密码：你所注册的密码</text>
+            </view>
+            <view class="help-q">3、忘记密码？</view>
+            <view class="help-a">
+                <text>请联系客服进行忘记密码操作</text>
+            </view>
+        </view>
+    </view>
+</view>

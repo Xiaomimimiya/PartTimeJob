@@ -1,0 +1,69 @@
+<wxs src="../../utils/util.wxs" module="filters" />
+<view wx:if="{{chat_friend.length==0}}" class='no-message'>
+    <image src="cloud://home-platform-0gpmrg4uda95ceae.686f-home-platform-0gpmrg4uda95ceae-1308239074/comm/no_message.png"></image>
+</view>
+<view wx:else class="chat_box">
+    <block wx:for="{{chat_friend}}" wx:key="index">
+        <block wx:if="{{item.user_id==userInfo._id}}">
+            <view class="box_content" bindtap="startChat" data-item="{{item}}">
+                <view class="left">
+                    <image class="friend_avatar" src="{{userInfo.user_avatar}}" mode="" />
+                </view>
+                <view class="middle">
+                    <view class="middle_top">
+                        <view class="name">
+                            {{item.friend_name}}
+                        </view>
+                        <view class="time">
+                            {{filters.formatDateEnglish(item.chat_record[item.chat_record.length-1].time)}}
+                        </view>
+                    </view>
+                    <view class="middle_bottom">
+
+                        <block wx:if="{{item.chat_record[item.chat_record.length-1].text.length>20}}">
+                            <view class="text">[图片]</view>
+                        </block>
+                        <block wx:else>
+                            <view class="text">
+                                {{item.chat_record[item.chat_record.length-1].text}}
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+
+        </block>
+        <block wx:if="{{item.friend_id==userInfo._id}}">
+            <view class="box_content" bindtap="startChat" data-item="{{item}}">
+                <view class="left">
+                    <image class="friend_avatar" src="{{chat_friend[0].friend_avatar}}" mode="" />
+                </view>
+                <view class="middle">
+                    <view class="middle_top">
+                        <view class="name">
+                            {{item.user_name}}
+                        </view>
+                        <view class="time">
+                            {{filters.formatDateEnglish(item.chat_record[item.chat_record.length-1].time)}}
+                        </view>
+                    </view>
+                    <view class="middle_bottom">
+                        <!-- <view class="text">
+                            {{item.chat_record[item.chat_record.length-1].text}}
+                        </view> -->
+                        <block wx:if="{{item.chat_record[item.chat_record.length-1].text.length>20}}">
+                            <view class="text">[图片]</view>
+                        </block>
+                        <block wx:else>
+                            <view class="text">
+                                {{item.chat_record[item.chat_record.length-1].text}}
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+
+        </block>
+    </block>
+
+</view>

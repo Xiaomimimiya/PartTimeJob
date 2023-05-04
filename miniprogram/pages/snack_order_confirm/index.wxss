@@ -1,0 +1,6 @@
+.confirm_box{
+    width: 96%;
+    margin: 0 auto;
+    border-radius: 16rpx;
+    margin-top: 30rpx;
+}

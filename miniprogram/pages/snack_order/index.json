@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "van-dialog": "/components/vantui/dialog/index",
+        "van-image":"/components/vantui/image/index"
+    },
+    "navigationBarTitleText": "代购下单"
+}

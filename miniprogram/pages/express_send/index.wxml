@@ -1,0 +1,39 @@
+<view class=" margin radius shadow bg-white padding animation-slide-bottom {{isFixedNav ? 'display-none' : ''}}">
+    <text> 注意事项：\n </text>
+    <text> 1.请保证您所发布的快递信息真实有效，切勿发布虚假信息。\n</text>
+    <text> 2.若存在相关非真实信息，管理员有权删除您发布的信息。</text>
+</view>
+
+<form catchsubmit="publish">
+    <view class="cu-form-group">
+        <view class="title">快递地址:</view>
+        <input placeholder="快递存放地址" class="input" name="start_address"></input>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">送达地址:</view>
+        <input placeholder="送达的寝室或其他位置" class="input" name="end_address"></input>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">时间要求:</view>
+        <input placeholder="配送时间或截止时间" class="input" name="time"></input>
+    </view>
+    <view class="cu-form-group margin-top">
+        <view class="title">接单价格：</view>
+        <input class="input" placeholder="请输入商品价格" name="price" type="number" />
+    </view>
+    <view class="cu-form-group">
+        <view class="title">联系方式:</view>
+        <input placeholder="建议微信/电话" class="input" name="contact"></input>
+        <text class=" text-orange"></text>
+    </view>
+    <view class="cu-form-group align-start">
+        <view class="title">快递描述：</view>
+        <textarea name="desc" maxlength="-1" disabled="{{modalName!=null}}" placeholder="关于快递的其他信息"></textarea>
+    </view>
+    <view class="padding flex  flex-wrap ">
+        <button class="cu-btn  bg-cyan shadow-blur flex-sub  margin-xs round" formType="reset">清空数据</button>
+        <button class="cu-btn  bg-blue shadow-blur flex-sub   margin-xs  round" formType="submit">发布快递
+        </button>
+    </view>
+
+</form>

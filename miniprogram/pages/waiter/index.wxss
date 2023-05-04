@@ -1,0 +1,116 @@
+.job_list_box {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.job_list_item {
+    margin-top: 10rpx;
+    border-radius: 12rpx;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+
+}
+
+.job_list_left {
+    margin-top: 10rpx;
+    margin-left: 15rpx;
+    margin-bottom: 10rpx;
+    width: 85%;
+}
+
+.job_header {
+
+    display: flex;
+    align-items: center;
+}
+
+.job_name {
+    font-size: 40rpx;
+    font-weight: 700;
+}
+
+.job_price {
+    flex-shrink: 0;
+    margin-left: 30rpx;
+    font-size: 38rpx;
+    line-height: 25rpx;
+    font-weight: 700;
+    color: #ff6400
+}
+
+.job_label {
+    width: 100%;
+    display: flex;
+
+    margin-bottom: 10rpx;
+}
+
+.van-button {
+    margin-right: 10rpx !important;
+    width: 20% !important;
+    background-color: #f8f9fb !important;
+
+}
+
+.job_company_detail {
+    display: flex;
+    margin-bottom: 10rpx;
+    align-items: center;
+
+}
+
+.location_text {
+    font-size: 25rpx;
+    margin-left: 5rpx;
+}
+
+.company_name {
+    margin-left: 10rpx;
+}
+
+.company_class {
+    margin-left: 10rpx;
+
+}
+
+.company_class .line {
+    margin-right: 10rpx;
+}
+
+
+.job_list_right {
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    width: 15%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.job_photo image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    margin: 0 auto;
+}
+
+.chat_name {
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.job_title {
+    font-size: 25rpx;
+    color: #999;
+    text-align: center;
+}
+.action button {
+    width: 130rpx !important;
+    height: 60rpx !important;
+}
+.searchInput{
+    margin-left: 30rpx;
+}

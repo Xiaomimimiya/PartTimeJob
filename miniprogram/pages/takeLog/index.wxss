@@ -1,0 +1,41 @@
+.no-message {
+    display: flex;
+    justify-content: center;
+}
+.no-message image {
+    margin-top: 200rpx;
+}
+.containers{
+    margin: 0 auto;
+    width: 98%;
+    font-family: Arial, sans-serif;
+ }
+ .log_box{
+     width: 100%;
+     background-color: #FFFFFF;
+     padding-left: 15rpx;
+     padding-top: 10rpx;
+     padding-bottom: 10rpx;
+     margin-top: 10rpx;
+     margin-bottom: 10rpx;
+     border-radius: 16rpx;
+ }
+ .log_box .btn{
+     margin-top: 10rpx;
+     margin-bottom: 10rpx;
+ 
+     position: relative;
+     left:45%;
+ }
+ .log_box .btn button{
+     margin-left: 10rpx;
+     height: 60rpx !important;
+     width: 25% ;
+ }
+
+
+ 
+ 
+ 
+ 
+ 

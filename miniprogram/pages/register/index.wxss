@@ -1,0 +1,80 @@
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: #7989da;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main .login {
+    margin-top: 150rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+}
+
+.main .login .kuang {
+    width: 600rpx;
+    background-color: #fff;
+    height: 850rpx;
+    margin-top: 0rpx;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50rpx 20rpx;
+}
+
+.main .login .kuang button {
+    
+    margin-bottom: 30rpxx;
+    width: 85%;
+    background-color: #0E9489;
+    color: #fff;
+    font-size: 32rpx;
+}
+
+.main .login .kuang .hint {
+    width: 100%;
+    color: rgb(107, 105, 112);
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.main .login .kuang .return {
+    width: 100%;
+    color: #0E9489;
+    font-size: 30rpx;
+    text-align: center;
+    font-size: 26rpx;
+    margin-top: 30rpx;
+}
+
+.avatar {
+    width: 120rpx;
+    height: 120rpx;
+
+}
+
+
+
+.form-group .title {
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    flex: 1;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20rpx;
+}

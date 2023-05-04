@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "van-submit-bar":"/components/vantui/submit-bar/index"
+    },
+    "navigationBarTitleText": "信息确认"
+}

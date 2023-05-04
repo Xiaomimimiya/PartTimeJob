@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "van-rate":"/components/vantui/rate/index"
+    },
+    "navigationBarTitleText": "其他服务"
+}

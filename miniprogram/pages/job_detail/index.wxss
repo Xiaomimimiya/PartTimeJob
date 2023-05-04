@@ -1,0 +1,48 @@
+.job_box{
+    margin: 0 auto;
+    width: 96%;
+    margin-top: 5rpx;
+    
+}
+.job_box .top{
+    background-color: #FFFFFF;
+   
+    padding-top: 10rpx;
+    padding-left: 15rpx;
+    padding-bottom: 15rpx;
+    border-radius: 14rpx;
+}
+.top .job_title{
+    display: flex;
+    align-items: center;
+}
+.top .job_name{
+    font-size: 40rpx;
+    font-weight: 650;
+    margin-left: 20rpx;
+}
+.job_title .job_price{
+    position: absolute;
+    right: 30rpx;
+    font-size: 35rpx;
+    color: #e01222;
+    font-weight: 650;
+}
+.top .job_time{
+    color: gray;
+    font-size: 30rpx;
+    margin-left: 20rpx;
+}
+.job_box .middle{
+    margin: 0 auto;
+    margin-top: 5rpx;
+    background-color: #FFFFFF;
+}
+
+.middle .hot_goods{
+    border-radius: 16rpx;
+}
+.job_content{
+    padding: 15rpx;
+    margin-left: 15rpx;
+}

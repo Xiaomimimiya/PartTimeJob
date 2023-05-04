@@ -1,0 +1,56 @@
+<wxs src="../../utils/util.wxs" module="filters" />
+<view class="money_box">
+    <view class="top">
+        <view class="title">
+            <text>可提现金额（元）</text>
+        </view>
+        <view class="money">
+            <view class="rmb">￥</view>
+            <block wx:if="{{currtent_user_money}}">
+                <view class="price">{{currtent_user_money}}</view>
+            </block>
+            <block wx:else>
+                <view class="price">0</view>
+            </block>
+        </view>
+    </view>
+    <view class="middle_box">
+        <view class="box_content">
+            <view class="price_title">提现金额</view>
+            <view class="input_box">
+                <text class="rmb_two">￥</text>
+                <input type="text" placeholder="请输入提现金额" class="input" bindinput="bindKeyInput" name="price"></input>
+            </view>
+            <view class="desc">
+                <view class="price_title">提现至</view>
+                <view class="icon">
+                    <image src="/assets/images/comm/wechat.png" mode="" />
+                    <text>微信</text>
+                </view>
+            </view>
+            <view class="bottom_btn" bindtap="getMoney">
+                <button class="round">立即提现</button>
+            </view>
+        </view>
+        <scroll-view>
+            <block wx:for="{{withlog}}" wx:key="index">
+                <view class="withdraw">
+                    <view class="with_item">
+                        <view class="item_left">
+                            <view class="desc">{{item.desc}}</view>
+                            <view class="time">{{filters.formatDate(item.time)}}</view>
+                        </view>
+                        <view class="item_right">
+                            <block wx:if="{{item.type=='withdraw'}}">
+                                <view class="price">-{{item.price}}元</view>
+                            </block>
+                            <block wx:else>
+                                <view class="price">+{{item.price}}元</view>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+</view>
